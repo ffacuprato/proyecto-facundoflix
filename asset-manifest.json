@@ -1,16 +1,31 @@
 {
   "files": {
-    "main.css": "/proyecto-facundoflix/static/css/main.073c9b0a.css",
-    "main.js": "/proyecto-facundoflix/static/js/main.dbc373ea.js",
+    "main.css": "/proyecto-facundoflix/static/css/main.6e035208.css",
+    "main.js": "/proyecto-facundoflix/static/js/main.71c03cb6.js",
     "static/js/787.2da27bd0.chunk.js": "/proyecto-facundoflix/static/js/787.2da27bd0.chunk.js",
-    "static/media/logo.svg": "/proyecto-facundoflix/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/slider1.png": "/proyecto-facundoflix/static/media/slider1.d3c1c3908da7b8729121.png",
+    "static/media/sliderB5.png": "/proyecto-facundoflix/static/media/sliderB5.a2d9f62c0a9eca0f770e.png",
+    "static/media/Group1.png": "/proyecto-facundoflix/static/media/Group1.1bf20267a72aa095db3a.png",
+    "static/media/player.png": "/proyecto-facundoflix/static/media/player.70ec3fcf707f68e6fe92.png",
+    "static/media/sliderB3.jpeg": "/proyecto-facundoflix/static/media/sliderB3.79bb2a57297e513340f9.jpeg",
+    "static/media/slider3.jpeg": "/proyecto-facundoflix/static/media/slider3.2830c676f9e386ad3cce.jpeg",
+    "static/media/sliderB.jpeg": "/proyecto-facundoflix/static/media/sliderB.9da00f98de44895258d0.jpeg",
+    "static/media/slider5.jpeg": "/proyecto-facundoflix/static/media/slider5.cfee5722b9769ab51f7c.jpeg",
+    "static/media/slider2.jpeg": "/proyecto-facundoflix/static/media/slider2.90f82ae76231fccc2804.jpeg",
+    "static/media/sliderIyG2.jpeg": "/proyecto-facundoflix/static/media/sliderIyG2.496fa846f15a92bbee8c.jpeg",
+    "static/media/sliderIyG.jpeg": "/proyecto-facundoflix/static/media/sliderIyG.1681b5cd7d3acdcec95e.jpeg",
+    "static/media/slider4.jpeg": "/proyecto-facundoflix/static/media/slider4.aeca97142617e7624ba4.jpeg",
+    "static/media/sliderB2.jpeg": "/proyecto-facundoflix/static/media/sliderB2.679d65311c6164603e83.jpeg",
+    "static/media/sliderIyG3.jpeg": "/proyecto-facundoflix/static/media/sliderIyG3.bc8bee280ec4f227e8c8.jpeg",
+    "static/media/sliderIyG4.jpeg": "/proyecto-facundoflix/static/media/sliderIyG4.f52612c51215ad2c5150.jpeg",
+    "static/media/logo.png": "/proyecto-facundoflix/static/media/logo.6a97f1ba63c84df7f2e2.png",
     "index.html": "/proyecto-facundoflix/index.html",
-    "main.073c9b0a.css.map": "/proyecto-facundoflix/static/css/main.073c9b0a.css.map",
-    "main.dbc373ea.js.map": "/proyecto-facundoflix/static/js/main.dbc373ea.js.map",
+    "main.6e035208.css.map": "/proyecto-facundoflix/static/css/main.6e035208.css.map",
+    "main.71c03cb6.js.map": "/proyecto-facundoflix/static/js/main.71c03cb6.js.map",
     "787.2da27bd0.chunk.js.map": "/proyecto-facundoflix/static/js/787.2da27bd0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.dbc373ea.js"
+    "static/css/main.6e035208.css",
+    "static/js/main.71c03cb6.js"
   ]
 }

@@ -1,0 +1,22 @@
+.slider-container{
+    margin: 0 auto;
+    overflow-x: hidden;
+    border: none ;
+    outline: none;
+    padding: 0 2rem;
+    background-color:#000000 ;
+}
+.slider{
+    display: flex;
+    cursor: grab;
+}
+.item{
+    height: 20rem;
+    min-width: 30rem;
+    padding: 1rem;
+}
+.item img{
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}

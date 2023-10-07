@@ -21,9 +21,9 @@ function App() {
       <ThemeProvider theme={tema ? temaClaro : temaOscuro}>
         <GlobalStyle />
         <DatosProvider>
-          <BrowserRouter>
+          <BrowserRouter basename="/">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="proyecto-facundoflix" element={<Home />} />
               <Route path="nuevo-video" element={<NuevoVideo />} />
               <Route path="nueva-categoria" element={<NuevaCategoria />} />
             </Routes>

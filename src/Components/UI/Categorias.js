@@ -28,7 +28,40 @@ export const Categorias = [
         Img:Player,
         BackGround:encodedBackgroundImg,
         Color: "#6BD1FF",
-        Imagenes:[sliderF2,sliderF3,sliderF4,sliderF5]
+        Videos:[
+        {
+            Nombre:"Aprendiendo a utilizar Figma",
+            Link:"",
+            LinkImg:sliderF2,
+            Categoria:"Frontend",
+            Descripcion:"",
+            Codigo:"",
+        },
+            {
+            Nombre:"Cuando usar let, var y const",
+            Link:"",
+            LinkImg:sliderF3,
+            Categoria:"Frontend",
+            Descripcion:"",
+            Codigo:"",
+        },
+        {
+            Nombre:"Que es JavaScript?",
+            Link:"",
+            LinkImg:sliderF4,
+            Categoria:"Frontend",
+            Descripcion:"",
+            Codigo:""
+        },
+        {
+            Nombre:"Equipo Frontend",
+            Link:"",
+            LinkImg:sliderF5,
+            Categoria:"Frontend",
+            Descripcion:"",
+            Codigo:"",
+        },
+        ],
     },
     {
         Titulo:"BackEnd",
@@ -37,7 +70,39 @@ export const Categorias = [
         Img:" ",
         BackGround:" ",
         Color: "#00C86F",
-        Imagenes:[sliderB1,sliderB2,sliderB3,sliderB4]
+        Videos:[{
+                Nombre:"Spring framework",
+                Link:"",
+                LinkImg:sliderB1,
+                Categoria:"BackEnd",
+                Descripcion:"",
+                Codigo:"",
+                },
+                {
+                Nombre:"Que es SQL y NOSQL",
+                Link:"",
+                LinkImg:sliderB2,
+                Categoria:"BackEnd",
+                Descripcion:"",
+                Codigo:"",
+                },
+                {
+                Nombre:"Simplificando codigo en JAVA",
+                Link:"",
+                LinkImg:sliderB3,
+                Categoria:"BackEnd",
+                Descripcion:"",
+                Codigo:"",
+                },
+                {
+                Nombre:"Tindev",
+                Link:"",
+                LinkImg:sliderB4,
+                Categoria:"BackEnd",
+                Descripcion:"",
+                Codigo:"",
+                },
+        ]
     },
     {
         Titulo:"Innovacion y Gestion",
@@ -46,6 +111,39 @@ export const Categorias = [
         Img:" ",
         BackGround:" ",
         Color: "#FF8C2A",
-        Imagenes:[sliderI1,sliderI2,sliderI3,sliderI4]
+        Videos:[
+        {
+            Nombre:"Metodologias agiles",
+            Link:"",
+            LinkImg:sliderI1,
+            Categoria:"Innovacion y Gestion",
+            Descripcion:"",
+            Codigo:"",
+        },
+        {
+            Nombre:"Que son las soft skills?",
+            Link:"",
+            LinkImg:sliderI2,
+            Categoria:"Innovacion y Gestion",
+            Descripcion:"",
+            Codigo:"",
+        },
+        {
+            Nombre:"",
+            Link:"",
+            LinkImg:sliderI3,
+            Categoria:"Innovacion y Gestion",
+            Descripcion:"",
+            Codigo:"",
+        },
+        {
+            Nombre:"Que son las soft skills?",
+            Link:"",
+            LinkImg:sliderI4,
+            Categoria:"Innovacion y Gestion",
+            Descripcion:"",
+            Codigo:"",
+        },        
+    ]
     }
 ]

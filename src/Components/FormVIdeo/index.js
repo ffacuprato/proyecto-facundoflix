@@ -19,9 +19,40 @@ export const FormVideo = () => {
     const [codigo, setCodigo] = useState('');
 
     const AgregarVideo = () => {
-        const { datos } = useDatos();
-        Categorias.push(datos);
-    }
+        const nuevoVideo = {
+            titulo,
+            link,
+            linkImg,
+            categoria,
+            descripcion,
+            codigo,
+        };
+    
+        const PushVideo = () => {
+            // Encuentra la categoría que coincide con el valor seleccionado en 'categoria'
+            const categoriaSeleccionada = Categorias.find(c => c.Titulo === categoria);
+        
+            // Verifica si se encontró la categoría antes de intentar agregar el nuevo video
+            if (categoriaSeleccionada) {
+                // Clona el arreglo de videos existente y agrega el nuevo video al final
+                categoriaSeleccionada.Videos = [...categoriaSeleccionada.Videos, nuevoVideo];
+                console.log(Categorias);
+            } else {
+                console.error(`La categoría '${categoria}' no se encontró en el arreglo de categorías.`);
+            }
+        };
+                
+        PushVideo();
+
+        // Actualizar la lista de datos utilizando la función setDatos del contexto
+    
+        // Reiniciar los campos del formulario
+        setTitulo('');
+        setLink('');
+        setLinkImg('');
+        setCategoria('');
+        setDescripcion('');
+        setCodigo('');    }
     
 
     const handleSubmit = (e) => {
@@ -64,7 +95,7 @@ export const FormVideo = () => {
                             color:'#000',
                         }
                     }}
-                    id={titulo} 
+                    name={titulo} 
                     label='Titulo'
                     variant="filled"
                     value={titulo}
@@ -88,7 +119,7 @@ export const FormVideo = () => {
                                 color:'#000',
                             }
                         }}
-                        id={link} 
+                        name={link} 
                         label='Link del video'
                         variant="filled"
                         value={link}
@@ -113,7 +144,7 @@ export const FormVideo = () => {
                                 color:'#000',
                             }
                         }}
-                        id={linkImg} 
+                        name={linkImg} 
                         label='Link de imagen del video'
                         variant="filled"
                         value={linkImg}
@@ -138,7 +169,7 @@ export const FormVideo = () => {
                                 color:'#000',
                             }
                         }}
-                        id={categoria} 
+                        name={categoria} 
                         label='Escoja una categoria'
                         variant="filled"
                         value={categoria}
@@ -164,7 +195,7 @@ export const FormVideo = () => {
                                     color:'#000',
                                 }
                             }}
-                            id="filled-multiline-flexible" 
+                            name="filled-multiline-flexible" 
                             label='Descripcion'
                             variant="filled"
                             multiline
@@ -192,7 +223,7 @@ export const FormVideo = () => {
                                 color:'#000',
                             }
                         }}
-                        id={codigo} 
+                        name={codigo} 
                         label='Codigo de seguridad'
                         variant="filled"
                         value={codigo}

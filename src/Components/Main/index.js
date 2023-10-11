@@ -76,8 +76,10 @@ export const Main = () => {
 
     const RenderedContainer = Categoria.BackGround === " " ? SmallContainer : Container;
 
-const Images = Categoria.Imagenes.map((image, imgIndex) => (
-    <motion.div className="item" key={imgIndex}>
+const Images = Categoria.Videos.map((video,videoIndex) => {
+    const image = video.LinkImg;
+
+    return <motion.div className="item" key={videoIndex}>
       <img
         src={image}
         alt=""
@@ -88,7 +90,7 @@ const Images = Categoria.Imagenes.map((image, imgIndex) => (
         }}
       />
     </motion.div>
-  ));
+    });
   
           const Slider = () => {
 
@@ -96,9 +98,9 @@ const Images = Categoria.Imagenes.map((image, imgIndex) => (
             const[sliderWidth,setSliderWidth]=useState(0);
             useEffect(() => {
                 // Calcula el ancho del slider en función de la cantidad de imágenes
-                const containerWidth = 240 * Categoria.Imagenes.length; // Cambia "240" al ancho real de tus elementos.
+                const containerWidth = 240 * Categoria.Videos.length; // Cambia "240" al ancho real de tus elementos.
                 setSliderWidth(containerWidth);
-              }, [Categoria.Imagenes]);
+              }, [Categoria.Videos.LinkImg]);
             
 
             return <motion.div className="slider-container" ref={sliderConstainerRef}>

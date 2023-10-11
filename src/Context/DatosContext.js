@@ -14,5 +14,8 @@ export const DatosProvider = ({ children }) => {
 };
 
 export const useDatos = () => {
-  return useContext(DatosContext);
+  return ([useContext(DatosContext),
+          console.log(DatosContext)]
+        )
+
 };

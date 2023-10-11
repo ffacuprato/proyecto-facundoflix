@@ -16,7 +16,7 @@ height: 2rem;
 export const HomeButtonAlura = () => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate('/');
+    navigate('/proyecto-facundoflix');
   }
   return <div>
     <Buton onClick={handleClick}></Buton>

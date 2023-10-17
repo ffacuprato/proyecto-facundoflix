@@ -11,7 +11,7 @@ export const Main = () => {
         const Title = styled.h1`
         display: flex;
         width: fit-content;
-        background-color:${Categoria.Color};
+        background-color:${Categoria.color};
         border-radius: 4px;
         color: #F5F5F5;
         flex-direction: column;
@@ -46,19 +46,19 @@ export const Main = () => {
             return <> </>
         }
 
-        const Player = Categoria.Img === " " ? Vacio : styled.div`
+        const Player = Categoria.img === " " ? Vacio : styled.div`
         width: 40.375rem;
         height: 20.84888rem;
         flex-shrink: 0;
         border-radius: 0.25rem;
         border: 4px solid var(----color-frontend, #6BD1FF);
-        background: url(${Categoria.Img}), lightgray 50% / cover no-repeat;
+        background: url(${Categoria.img}), lightgray 50% / cover no-repeat;
     `
         const Container = styled.section`
         display: flex;
         flex-direction: row;
         background-color: #000000;
-        background-image: url(${Categoria.BackGround});
+        background-image: url(${Categoria.backGround});
         background-repeat: no-repeat;
         background-size: cover;
         padding: 18.5rem 2rem 1rem 2rem;
@@ -74,17 +74,18 @@ export const Main = () => {
         gap: 2rem;
     `;
 
-    const RenderedContainer = Categoria.BackGround === " " ? SmallContainer : Container;
+    const RenderedContainer = Categoria.backGround === " " ? SmallContainer : Container;
 
-const Images = Categoria.Videos.map((video,videoIndex) => {
-    const image = video.LinkImg;
+const Images = Categoria.videos.map((video,videoIndex) => {
+  
+    const image = video.linkImg;
 
     return <motion.div className="item" key={videoIndex}>
       <img
         src={image}
         alt=""
         style={{
-          border: `4px solid ${Categoria.Color}`,
+          border: `4px solid ${Categoria.color}`,
           borderRadius:`0.25remd`
           // Agrega otros estilos CSS según sea necesario
         }}
@@ -98,9 +99,9 @@ const Images = Categoria.Videos.map((video,videoIndex) => {
             const[sliderWidth,setSliderWidth]=useState(0);
             useEffect(() => {
                 // Calcula el ancho del slider en función de la cantidad de imágenes
-                const containerWidth = 240 * Categoria.Videos.length; // Cambia "240" al ancho real de tus elementos.
+                const containerWidth = 240 * Categoria.videos.length; // Cambia "240" al ancho real de tus elementos.
                 setSliderWidth(containerWidth);
-              }, [Categoria.Videos.LinkImg]);
+              }, [Categoria.videos.linkImg]);
             
 
             return <motion.div className="slider-container" ref={sliderConstainerRef}>
@@ -115,9 +116,9 @@ const Images = Categoria.Videos.map((video,videoIndex) => {
         return <>
             <RenderedContainer>
                 <div>
-                <Title>{Categoria.Titulo}</Title>
-                <SubTitle>{Categoria.SubTitulo}</SubTitle>
-                <Texto>{Categoria.Descripcion}</Texto>
+                <Title>{Categoria.nombre}</Title>
+                <SubTitle>{Categoria.subTitulo}</SubTitle>
+                <Texto>{Categoria.descripcion}</Texto>
                 </div>
                 <Player />
               </RenderedContainer>

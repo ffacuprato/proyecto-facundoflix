@@ -11,6 +11,8 @@ import { BtnEditar, BtnRemove } from "../UI/index";
 
 const BasicTable = () => {
 
+    const categorias = Categorias
+
     const tableStyles = {
         display:'flex',
         justifyContent:'center',
@@ -20,7 +22,7 @@ const BasicTable = () => {
       };
 
     return (
-      <TableContainer component={Paper} sx={tableStyles}>
+      <TableContainer component={Paper} sx={tableStyles} >
         <Table sx={{width:'92.5%',
         }} aria-label="simple table"
         >
@@ -33,15 +35,13 @@ const BasicTable = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {Categorias.map((row) => (
+            {categorias.map((row) => (
               <TableRow
-                key={row.Titulo}
+                key={row.nombre}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell component="th" scope="row" sx={cellStyles}>
-                  {row.Titulo}
-                </TableCell>
-                <TableCell align="left" sx={cellStyles}>{row.Descripcion}</TableCell>
+                <TableCell component="th" scope="row" sx={cellStyles}>{row.nombre}</TableCell>
+                <TableCell align="left" sx={cellStyles}>{row.descripcion}</TableCell>
                 <TableCell align="right" sx={cellStyles}><BtnEditar /></TableCell>
                 <TableCell align="right" sx={cellStyles}><BtnRemove /></TableCell>
               </TableRow>

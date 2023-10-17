@@ -24,7 +24,7 @@ export const HomeButtonAlura = () => {
 }
 
 export const IconoTema = styled(Icono)`
-  filter: ${({theme})=> theme.filter};
+  filter: ${({theme}) => theme.filter};
 `
 
 export const BtnTema = styled.div`

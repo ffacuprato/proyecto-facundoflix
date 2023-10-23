@@ -69,6 +69,7 @@ export const BtnGuardar = styled.button`
   border: none;
 `
 
+
 export const BtnLimpiar = styled.button`
   display: flex;
   width: 11.25rem;
@@ -116,7 +117,7 @@ export const Container = styled.section`
   background-color: #000000E5;
 `
 
-export const BotonesVideoForm = () => {
+export const BotonesVideoForm = ({ onButtonClick }) => {
   const Container = styled.div`
     display: flex;
     justify-content: space-between;
@@ -137,7 +138,7 @@ export const BotonesVideoForm = () => {
   return <Container>
     <BotonesIzq>
     <BtnGuardar type="submit">Guardar</BtnGuardar>
-    <BtnLimpiar>Limpiar</BtnLimpiar>
+    <BtnLimpiar type="button" onClick={() => onButtonClick("BtnLimpiar")}>Limpiar</BtnLimpiar>
     </ BotonesIzq>
     <div>
       <BtnNuevaCategoria onClick={handleClick}>Nueva Categoria</BtnNuevaCategoria>
@@ -145,7 +146,9 @@ export const BotonesVideoForm = () => {
   </Container>
 }
 
-export const BotonesCategoriaForm = () => {
+export const BotonesCategoriaForm = ({ onButtonClick }) => {
+  
+  
   const Container = styled.div`
     display: flex;
     justify-content: space-between;
@@ -153,17 +156,17 @@ export const BotonesCategoriaForm = () => {
     margin-top: 1.5rem;
   `
   const BotonesIzq = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
   `
 
   return <Container>
-    <BotonesIzq>
-    <BtnGuardar type="submit">Guardar</BtnGuardar>
-    <BtnLimpiar>Limpiar</BtnLimpiar>
-    </ BotonesIzq>
-  </Container>
+          <BotonesIzq>
+            <BtnGuardar type="submit">Guardar</BtnGuardar>
+            <BtnLimpiar type="button" onClick={() => onButtonClick("BtnLimpiar")}>Limpiar</BtnLimpiar>
+          </ BotonesIzq>
+        </Container>
 }
 
 export const BtnEditar = () => {
@@ -206,4 +209,11 @@ export const BtnRemove = () => {
   border: none;
 `
 return <Btn>Remover</Btn>
+}
+
+export const BtnNuevoElemento = (props) =>{
+  const handleClick = () =>{
+    props.onClick()
+  }
+  return <BtnGuardar onClick={handleClick}>Nuevo elemento</BtnGuardar>
 }

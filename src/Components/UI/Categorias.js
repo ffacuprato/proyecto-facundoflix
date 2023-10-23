@@ -63,8 +63,8 @@ export const Categorias = [
         nombre:"BackEnd",
         subTitulo:"",
         descripcion:"Formacion Back End de Alura Latam",
-        img:" ",
-        backGround:" ",
+        img:"",
+        backGround:"",
         color: "#00C86F",
         videos:[{
                 titulo:"Spring framework",
@@ -104,8 +104,8 @@ export const Categorias = [
         nombre:"Innovacion y Gestion",
         subTitulo:"",
         descripcion:"Formacion de Innovacion y Gestion de Alura Latam",
-        img:" ",
-        backGround:" ",
+        img:"",
+        backGround:"",
         color: "#FF8C2A",
         videos:[
         {

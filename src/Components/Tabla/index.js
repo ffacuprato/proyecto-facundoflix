@@ -16,7 +16,9 @@ const BasicTable = () => {
     const tableStyles = {
         display:'flex',
         justifyContent:'center',
-        backgroundColor: '#000000E5',};
+        backgroundColor: '#000000E5',
+        borderRadius: '0',  
+      };
       const cellStyles = {
         color: '#FFF', // Cambiar el color de la fuente
       };

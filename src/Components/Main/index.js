@@ -46,7 +46,8 @@ export const Main = () => {
             return <> </>
         }
 
-        const Player = Categoria.img === " " ? Vacio : styled.div`
+
+        const Player = Categoria.img === '' ? Vacio : styled.div`
         width: 40.375rem;
         height: 20.84888rem;
         flex-shrink: 0;
@@ -74,7 +75,7 @@ export const Main = () => {
         gap: 2rem;
     `;
 
-    const RenderedContainer = Categoria.backGround === " " ? SmallContainer : Container;
+    const RenderedContainer = Categoria.img === '' ? SmallContainer : Container;
 
 const Images = Categoria.videos.map((video,videoIndex) => {
   
@@ -112,6 +113,20 @@ const Images = Categoria.videos.map((video,videoIndex) => {
                 
           }
 
+          const NoHayVideos = () => {
+            const Texto = styled.h1`
+            color: white;
+            background-color: #000;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+          `
+          return <Texto>Aun no hay videos disponibles</Texto>
+          }
+
+          const CarreteVideos = Categoria.videos.length === 0 ? NoHayVideos : Slider;
   
         return <>
             <RenderedContainer>
@@ -122,7 +137,7 @@ const Images = Categoria.videos.map((video,videoIndex) => {
                 </div>
                 <Player />
               </RenderedContainer>
-            <Slider />
+            <CarreteVideos />
         </>
     });
 

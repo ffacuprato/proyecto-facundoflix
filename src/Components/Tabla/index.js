@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState , useEffect } from "react";
 import { Categorias } from "../UI/Categorias";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -10,24 +10,32 @@ import Paper from '@mui/material/Paper';
 import styled from "styled-components";
 
 const BasicTable = () => {
-    
-    const handleEditarClick = (e) => {
+
+    const [categorias,setCategorias] = useState(Categorias);
+
+    const HandleEditarClick = (e) => {
       const index = e.target.id;
       console.log(index)
     }
-
-    const handleRemoveClick = (e) => {
-      const index = e.target.id
-      Categorias.splice(index,1)
+    
+    const HandleRemoveClick = (e) => {
+      const index = e.target.id;
+      const updatedCategorias = [...categorias];
+      Categorias.splice(index,1);
+      updatedCategorias.splice(index,1);
+      setCategorias(updatedCategorias);    
     }
 
-    const categorias = Categorias;
-
+    useEffect(() => {
+      // Puedes realizar acciones adicionales aquí si es necesario
+      // Este efecto se ejecuta cada vez que 'categorias' cambia.
+    }, [categorias]);
+    
     const tableStyles = {
         display:'flex',
         justifyContent:'center',
         backgroundColor: '#000000E5',
-        borderRadius: '0',  
+        borderRadius: '0', 
       };
       const cellStyles = {
         color: '#FFF',
@@ -67,7 +75,8 @@ const BasicTable = () => {
      border: none;
      `
  
-    return (
+    if (categorias.length > 0) {
+      return (
       <TableContainer component={Paper} sx={tableStyles} >
         <Table sx={{width:'92.5%',
         }} aria-label="simple table"
@@ -88,15 +97,19 @@ const BasicTable = () => {
               >
                 <TableCell component="th" scope="row" sx={cellStyles}>{row.nombre}</TableCell>
                 <TableCell align="left" sx={cellStyles}>{row.descripcion}</TableCell>
-                <TableCell align="right" sx={cellStyles}><BtnEditar onClick={handleEditarClick} id={index}>Editar</BtnEditar></TableCell>
-                <TableCell align="right" sx={cellStyles}><BtnRemove onClick={handleRemoveClick} id={index}>Remover</BtnRemove></TableCell>
+                <TableCell align="right" sx={cellStyles}><BtnEditar onClick={HandleEditarClick} id={index}>Editar</BtnEditar></TableCell>
+                <TableCell align="right" sx={cellStyles}><BtnRemove onClick={HandleRemoveClick} id={index}>Remover</BtnRemove></TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
     );
-  }
+    }else{
+    <></>
+    }
+}
+
 
 export const Tabla = () => {
     return <BasicTable />

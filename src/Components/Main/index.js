@@ -6,6 +6,22 @@ import "../Main/Main.css"
 
 export const Main = () => {
 
+  const NoHayVideos = () => {
+    const Container = styled.div`
+    background-color: #000;
+    width: 100%;
+    `
+    const Texto = styled.h1`
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+  `
+  return <Container><Texto>Aun no hay videos disponibles</Texto></Container>
+  }
+
     const Equipo = Categorias.map((Categoria) => {
 
         const Title = styled.h1`
@@ -113,19 +129,6 @@ const Images = Categoria.videos.map((video,videoIndex) => {
                 
           }
 
-          const NoHayVideos = () => {
-            const Texto = styled.h1`
-            color: white;
-            background-color: #000;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 0;
-            padding: 1rem 0;
-            display: flex;
-            justify-content: center;
-          `
-          return <Texto>Aun no hay videos disponibles</Texto>
-          }
-
           const CarreteVideos = Categoria.videos.length === 0 ? NoHayVideos : Slider;
   
         return <>
@@ -141,7 +144,11 @@ const Images = Categoria.videos.map((video,videoIndex) => {
         </>
     });
 
-    return Equipo
+    if (Categorias.length > 0) {
+      return Equipo;
+    }else{
+      return NoHayVideos();
+    }
 }
 
 

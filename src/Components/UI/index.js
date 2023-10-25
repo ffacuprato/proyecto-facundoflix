@@ -138,7 +138,7 @@ export const BotonesVideoForm = ({ onButtonClick }) => {
   return <Container>
     <BotonesIzq>
     <BtnGuardar type="submit">Guardar</BtnGuardar>
-    <BtnLimpiar type="button" onClick={() => onButtonClick("BtnLimpiar")}>Limpiar</BtnLimpiar>
+    <BtnLimpiar type="button" >Limpiar</BtnLimpiar>
     </ BotonesIzq>
     <div>
       <BtnNuevaCategoria onClick={handleClick}>Nueva Categoria</BtnNuevaCategoria>
@@ -169,8 +169,8 @@ export const BotonesCategoriaForm = ({ onButtonClick }) => {
         </Container>
 }
 
-export const BtnEditar = () => {
-  const Btn = styled.button`
+export const BtnEditar = ({onButtonClick}) => {
+  const BtnEditar = styled.button`
    flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -186,13 +186,15 @@ export const BtnEditar = () => {
   border-radius: 5px;
   border: none;
 `
-return <Btn>Editar</Btn>
+return <BtnEditar type="button" onClick={() => onButtonClick("BtnEditar")}>Editar</BtnEditar>
 
 }
 
-export const BtnRemove = () => {
+export const BtnRemove = ({onButtonClick , key}) => {
 
-  const Btn = styled.button`
+  const identificacion = key
+
+  const BtnRemove = styled.button`
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -208,7 +210,7 @@ export const BtnRemove = () => {
   border-radius: 5px;
   border: none;
 `
-return <Btn>Remover</Btn>
+return <BtnRemove type="button" onClick={() => onButtonClick("BtnRemove", identificacion)}>Remover</BtnRemove>
 }
 
 export const BtnNuevoElemento = (props) =>{

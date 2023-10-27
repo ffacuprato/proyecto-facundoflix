@@ -8,6 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import styled from "styled-components";
+import NestedModal from "../EditarVideo";
 
 const BasicTable = () => {
 
@@ -59,6 +60,7 @@ const BasicTable = () => {
      `
   
      const BtnRemove = styled.button`
+     height: 36px;
      flex-shrink: 0;
      display: flex;
      justify-content: center;
@@ -97,7 +99,7 @@ const BasicTable = () => {
               >
                 <TableCell component="th" scope="row" sx={cellStyles}>{row.nombre}</TableCell>
                 <TableCell align="left" sx={cellStyles}>{row.descripcion}</TableCell>
-                <TableCell align="right" sx={cellStyles}><BtnEditar onClick={HandleEditarClick} id={index}>Editar</BtnEditar></TableCell>
+                <TableCell align="right" sx={cellStyles}><NestedModal id={index}/></TableCell>
                 <TableCell align="right" sx={cellStyles}><BtnRemove onClick={HandleRemoveClick} id={index}>Remover</BtnRemove></TableCell>
               </TableRow>
             ))}

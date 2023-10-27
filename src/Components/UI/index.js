@@ -169,9 +169,9 @@ export const BotonesCategoriaForm = ({ onButtonClick }) => {
         </Container>
 }
 
-export const BtnEditar = ({onButtonClick}) => {
+export const BtnEditar = () => {
   const BtnEditar = styled.button`
-   flex-shrink: 0;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,7 +186,7 @@ export const BtnEditar = ({onButtonClick}) => {
   border-radius: 5px;
   border: none;
 `
-return <BtnEditar type="button" onClick={() => onButtonClick("BtnEditar")}>Editar</BtnEditar>
+return <BtnEditar type="button">Editar</BtnEditar>
 
 }
 
@@ -195,6 +195,7 @@ export const BtnRemove = ({onButtonClick , key}) => {
   const identificacion = key
 
   const BtnRemove = styled.button`
+  height: 36px;
   flex-shrink: 0;
   display: flex;
   justify-content: center;

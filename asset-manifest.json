@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/proyecto-facundoflix/static/css/main.6e035208.css",
-    "main.js": "/proyecto-facundoflix/static/js/main.93938254.js",
+    "main.js": "/proyecto-facundoflix/static/js/main.72ddf5ec.js",
     "static/js/787.2da27bd0.chunk.js": "/proyecto-facundoflix/static/js/787.2da27bd0.chunk.js",
     "static/media/slider1.png": "/proyecto-facundoflix/static/media/slider1.d3c1c3908da7b8729121.png",
     "static/media/sliderB5.png": "/proyecto-facundoflix/static/media/sliderB5.a2d9f62c0a9eca0f770e.png",
@@ -21,11 +21,11 @@
     "static/media/logo.png": "/proyecto-facundoflix/static/media/logo.6a97f1ba63c84df7f2e2.png",
     "index.html": "/proyecto-facundoflix/index.html",
     "main.6e035208.css.map": "/proyecto-facundoflix/static/css/main.6e035208.css.map",
-    "main.93938254.js.map": "/proyecto-facundoflix/static/js/main.93938254.js.map",
+    "main.72ddf5ec.js.map": "/proyecto-facundoflix/static/js/main.72ddf5ec.js.map",
     "787.2da27bd0.chunk.js.map": "/proyecto-facundoflix/static/js/787.2da27bd0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6e035208.css",
-    "static/js/main.93938254.js"
+    "static/js/main.72ddf5ec.js"
   ]
 }

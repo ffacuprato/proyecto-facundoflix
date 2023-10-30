@@ -13,11 +13,6 @@ import NestedModal from "../EditarVideo";
 const BasicTable = () => {
 
     const [categorias,setCategorias] = useState(Categorias);
-
-    const HandleEditarClick = (e) => {
-      const index = e.target.id;
-      console.log(index)
-    }
     
     const HandleRemoveClick = (e) => {
       const index = e.target.id;
@@ -28,10 +23,8 @@ const BasicTable = () => {
     }
 
     useEffect(() => {
-      // Puedes realizar acciones adicionales aquí si es necesario
-      // Este efecto se ejecuta cada vez que 'categorias' cambia.
     }, [categorias]);
-    
+
     const tableStyles = {
         display:'flex',
         justifyContent:'center',
@@ -41,23 +34,6 @@ const BasicTable = () => {
       const cellStyles = {
         color: '#FFF',
       };
-
-      const BtnEditar = styled.button`
-      flex-shrink: 0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     color: #FFF;
-     background-color: #2A7AE4;
-     vertical-align: center;
-     font-family: 'Roboto';
-     font-size: 1.3125rem;
-     font-style: normal;
-     font-weight: 400;
-     line-height: 1.5rem; /* 114.286% */
-     border-radius: 5px;
-     border: none;
-     `
   
      const BtnRemove = styled.button`
      height: 36px;
@@ -99,7 +75,7 @@ const BasicTable = () => {
               >
                 <TableCell component="th" scope="row" sx={cellStyles}>{row.nombre}</TableCell>
                 <TableCell align="left" sx={cellStyles}>{row.descripcion}</TableCell>
-                <TableCell align="right" sx={cellStyles}><NestedModal id={index}/></TableCell>
+                <TableCell align="right" sx={cellStyles}><NestedModal id={index} /></TableCell>
                 <TableCell align="right" sx={cellStyles}><BtnRemove onClick={HandleRemoveClick} id={index}>Remover</BtnRemove></TableCell>
               </TableRow>
             ))}

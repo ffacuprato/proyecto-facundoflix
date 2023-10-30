@@ -57,26 +57,38 @@ export default function NestedModal(props) {
   const [img,setImg]=useState(Categorias[index].img);
   const [backGround,setBackGround]=useState(Categorias[index].backGround);
   const [color,setColor]= useState(Categorias[index].color);
+  const videos = Categorias[index].videos;
   const [descripcion,setDescripcion]=useState(Categorias[index].descripcion);
 
 
   const handleOpen = (e) => {
     setOpen(true);
-    console.log(e.target.id)
   };
+
   const handleClose = () => {
     setOpen(false);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('enviar formulario');
+    Categorias.splice(index,1,datos);
+    handleClose();
+    return Categorias;
   }
 
   const handleChange = (color) => {
     setColor(color);
   };
 
+  const datos = {
+    nombre,
+    subTitulo,
+    img,
+    backGround,
+    color,
+    videos,
+    descripcion,
+  };
 
   return (
     <div>
@@ -93,6 +105,7 @@ export default function NestedModal(props) {
                 fontSize:'2.75rem',
                 textAlign:'left'
             }}>Editar categoria</Title>
+            
             <form onSubmit={handleSubmit}>
             
             <TextField 
@@ -114,7 +127,8 @@ export default function NestedModal(props) {
                 label='Nombre'
                 variant="filled"
                 value={nombre}
-                onChange={()=>{
+                onChange={(e)=>{
+                    setNombre(e.target.value);
                 }}
             />
             <TextField 
@@ -135,8 +149,9 @@ export default function NestedModal(props) {
                 }}
                 label='Subtitulo'
                 variant="filled"
-                value={Categorias[props.id].subTitulo}
-                onChange={()=>{
+                value={subTitulo}
+                onChange={(e)=>{
+                    setSubTitulo(e.target.value);
                 }}
             />
             <TextField 
@@ -157,8 +172,9 @@ export default function NestedModal(props) {
                 }}
                 label='Imagen'
                 variant="filled"
-                value={Categorias[props.id].img}
+                value={img}
                 onChange={()=>{
+                    
                 }}
             />
             <TextField 
@@ -179,7 +195,7 @@ export default function NestedModal(props) {
                 }}
                 label='Background'
                 variant="filled"
-                value={Categorias[props.id].backGround}
+                value={backGround}
                 onChange={()=>{
                 }}
             />
@@ -204,7 +220,7 @@ export default function NestedModal(props) {
                 width:'100%',
             }
             }}
-            value={Categorias[props.id].color} 
+            value={color} 
             onChange={handleChange}
             variant="filled"
             />
@@ -226,8 +242,9 @@ export default function NestedModal(props) {
                 }}
                 label='Descripcion'
                 variant="filled"
-                value={Categorias[props.id].descripcion}
-                onChange={()=>{
+                value={descripcion}
+                onChange={(e)=>{
+                    setDescripcion(e.target.value);
                 }}
             />
             <BtnGuardar style={{

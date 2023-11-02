@@ -4,7 +4,6 @@ import LogoAlura from "../../assets/images/logo.png";
 
 
 const Container = styled.section`
-    width: 100%;
     border: 1px solid #2A7AE4;
     background-color: #000;
     display: flex;

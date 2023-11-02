@@ -22,9 +22,9 @@ const handleClick = () => {
 }
 
     return <Nav>
-            <HomeButtonAlura />
-            <div><Button variant="outlined" onClick={handleClick}>Nuevo Video</Button>
-            </div>
-        </Nav>
+                <HomeButtonAlura />
+                <div><Button variant="outlined" onClick={handleClick}>Nuevo Video</Button>
+                </div>
+            </Nav>
        
 }

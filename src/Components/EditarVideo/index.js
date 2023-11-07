@@ -31,6 +31,7 @@ const style = {
 };
 const btnStyle = {
     height:'36px',
+    width:'100%',
     flexShrink: 0,
     display: 'flex',
     justifyContent: 'center',

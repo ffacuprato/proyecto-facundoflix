@@ -51,6 +51,11 @@ const BasicTable = () => {
      line-height: 1.5rem; /* 114.286% */
      border-radius: 5px;
      border: none;
+     transition: .5s;
+     &:hover{
+      background-color: #000;
+      color: #FFF;
+     };
      `
  
     if (categorias.length > 0) {
@@ -76,7 +81,7 @@ const BasicTable = () => {
                 <TableCell component="th" scope="row" sx={cellStyles}>{row.nombre}</TableCell>
                 <TableCell align="left" sx={cellStyles}>{row.descripcion}</TableCell>
                 <TableCell align="right" sx={cellStyles}><NestedModal id={index} /></TableCell>
-                <TableCell align="right" sx={cellStyles}><BtnRemove onClick={HandleRemoveClick} id={index}>Remover</BtnRemove></TableCell>
+                <TableCell align="rigth" sx={cellStyles}><BtnRemove onClick={HandleRemoveClick} id={index}>Remover</BtnRemove></TableCell>
               </TableRow>
             ))}
           </TableBody>

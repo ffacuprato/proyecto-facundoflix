@@ -5,6 +5,7 @@ import LogoAlura from "../../assets/images/logo.png";
 
 const Container = styled.section`
     border: 1px solid #2A7AE4;
+    box-shadow: 2px 2px 5px #2A7AE4;
     background-color: #000;
     display: flex;
     flex-direction: column;

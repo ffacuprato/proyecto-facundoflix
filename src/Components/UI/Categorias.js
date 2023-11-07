@@ -12,6 +12,7 @@ import sliderI3 from "../../assets/images/sliderIyG3.jpeg";
 import sliderI4 from "../../assets/images/sliderIyG4.jpeg";
 import Player from "../../assets/images/player.png";
 import BackGroundImg from "../../assets/images/Group1.png";
+import BackGroundIT from "../../assets/images/backgroundIT.jpg"
 
 const encodedBackgroundImg = encodeURIComponent(BackGroundImg);
 
@@ -22,7 +23,7 @@ export const Categorias = [
         subTitulo:"Challenge React",
         descripcion:"Este challenge es una forma de aprendizaje. Es un mecanismo donde podrás comprometerte en la resolución de un problema para poder aplicar todos los conocimientos adquiridos en la formación React.",
         img:Player,
-        backGround:encodedBackgroundImg,
+        backGround:BackGroundImg,
         color: "#6BD1FF",
         videos:[
         {

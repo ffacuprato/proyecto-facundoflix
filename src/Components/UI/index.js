@@ -7,10 +7,13 @@ export const Icono = styled.img`
     width: 25px;
 `
 
-export const Buton = styled.button`
+export const Button = styled.button`
 background-image: ${LogoAlura};
+background-size: cover;
+border: none;
+background-repeat: no-repeat;
 width:3rem;
-height: 2rem;
+height: 1rem;
 `
 
 export const HomeButtonAlura = () => {
@@ -19,7 +22,7 @@ export const HomeButtonAlura = () => {
     navigate('/proyecto-facundoflix');
   }
   return <div>
-    <Buton onClick={handleClick}></Buton>
+    <Button onClick={handleClick}></Button>
   </div>
 }
 
@@ -67,6 +70,14 @@ export const BtnGuardar = styled.button`
   line-height: 1.5rem; /* 114.286% */
   border-radius: 5px;
   border: none;
+  transition:.5s;
+  &:hover{
+    background-color: #000;
+    color: #FFF;
+  }
+  @media screen and (max-width:990px){
+    width: 100%;
+  }
 `
 
 
@@ -87,6 +98,18 @@ export const BtnLimpiar = styled.button`
   background-color: #9E9E9E;
   border-radius: 5px;
   border: none;
+  transition:.5s;
+  &:hover{
+    background-color: #000;
+    color: #FFF;
+  }
+  @media screen and (max-width:990px){
+    width: 100%;
+  }
+  @media screen and (max-width:768px){
+    width:100%;
+  }
+
 `
 
 export const BtnNuevaCategoria = styled.button`
@@ -106,6 +129,15 @@ export const BtnNuevaCategoria = styled.button`
   line-height: 1.5rem; /* 114.286% */
   border-radius: 5px;
   border: none;
+  transition:.5s;
+  &:hover{
+    background-color: #000;
+    color: #FFF;
+  }
+  @media screen and (max-width:990px){
+    width: 100%;
+  }
+
 `
 
 export const Container = styled.section`
@@ -123,11 +155,21 @@ export const BotonesVideoForm = ({ onButtonClick }) => {
     justify-content: space-between;
     padding: 25px 12px 8px;
     margin-top: 1.5rem;
+    @media screen and (max-width:990px){
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
   `
   const BotonesIzq = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  @media screen and (max-width:990px){
+    flex-direction: column;
+    width: 100%;
+  }
   `
   const navigate =useNavigate();
 
@@ -136,14 +178,12 @@ export const BotonesVideoForm = ({ onButtonClick }) => {
   }
   
   return <Container>
-    <BotonesIzq>
-    <BtnGuardar type="submit">Guardar</BtnGuardar>
-    <BtnLimpiar type="button" >Limpiar</BtnLimpiar>
-    </ BotonesIzq>
-    <div>
-      <BtnNuevaCategoria onClick={handleClick}>Nueva Categoria</BtnNuevaCategoria>
-\    </div>
-  </Container>
+            <BotonesIzq>
+            <BtnGuardar type="submit">Guardar</BtnGuardar>
+            <BtnLimpiar type="button" >Limpiar</BtnLimpiar>
+            </ BotonesIzq>
+            <BtnNuevaCategoria onClick={handleClick}>Nueva Categoria</BtnNuevaCategoria>
+        </Container>
 }
 
 export const BotonesCategoriaForm = ({ onButtonClick }) => {
@@ -154,11 +194,22 @@ export const BotonesCategoriaForm = ({ onButtonClick }) => {
     justify-content: space-between;
     padding: 25px 12px 8px;
     margin-top: 1.5rem;
+    @media screen and (max-width:990px){
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
   `
   const BotonesIzq = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    @media screen and (max-width:990px){
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    }
   `
 
   return <Container>

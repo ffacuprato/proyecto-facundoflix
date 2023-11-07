@@ -85,6 +85,7 @@ export const FormCategoria = () => {
                                                 }
                                             }}
                                             id={nombre} 
+                                            required
                                             label='Nombre'
                                             variant="filled"
                                             value={nombre}
@@ -110,6 +111,7 @@ export const FormCategoria = () => {
                                                 }
                                             }}
                                             id={subTitulo} 
+                                            required
                                             label='Subtitulo'
                                             variant="filled"
                                             value={subTitulo}
@@ -160,6 +162,7 @@ export const FormCategoria = () => {
                                                 }
                                             }}
                                             id={descripcion} 
+                                            required
                                             label='Descripcion'
                                             variant="filled"
                                             value={descripcion}

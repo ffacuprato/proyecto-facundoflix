@@ -66,11 +66,10 @@ export const Main = () => {
         const Player = Categoria.img === '' ? Vacio : styled.div`
         width: 40.375rem;
         height: 20.84888rem;
-        flex-shrink: 0;
         border-radius: 0.25rem;
         border: 4px solid var(----color-frontend, #6BD1FF);
         background: url(${Categoria.img}), lightgray 50% / cover no-repeat;
-    `
+        `;
         const Container = styled.section`
         display: flex;
         flex-direction: row;
@@ -80,16 +79,21 @@ export const Main = () => {
         background-size: cover;
         padding: 18.5rem 2rem 1rem 2rem;
         gap: 2rem;
-    `;
+        `;
+
+        const IzqPlayer = styled.div`
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        `
 
         const SmallContainer = styled.section`
         display: flex;
         flex-direction: row;
         background-color: #000000;
-        padding: 1rem 2rem;
-
+        padding: 1rem 0;
         gap: 2rem;
-    `;
+        `;
 
     const RenderedContainer = Categoria.img === '' ? SmallContainer : Container;
 
@@ -122,7 +126,7 @@ const Images = Categoria.videos.map((video,videoIndex) => {
             
 
             return <motion.div className="slider-container" ref={sliderConstainerRef}>
-                    <motion.div className="slider" drag="x" dragConstraints={{right: 0,left: -sliderWidth }}>
+                    <motion.div className="slider" drag="x" dragConstraints={{right: -10,left: -sliderWidth }}>
                         {Images}
                     </motion.div>
             </motion.div>
@@ -133,11 +137,11 @@ const Images = Categoria.videos.map((video,videoIndex) => {
   
         return <>
             <RenderedContainer>
-                <div>
+                <IzqPlayer>
                 <Title>{Categoria.nombre}</Title>
                 <SubTitle>{Categoria.subTitulo}</SubTitle>
                 <Texto>{Categoria.descripcion}</Texto>
-                </div>
+                </IzqPlayer>
                 <Player />
               </RenderedContainer>
             <CarreteVideos />

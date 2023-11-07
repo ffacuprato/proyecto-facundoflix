@@ -92,13 +92,15 @@ export const FormVideo = () => {
                                         backgroundColor: '#9E9E9E',
                                         border:'none',
                                         },
+                                        
                                     }}
                                     InputLabelProps={{
                                         style: {
                                             color:'#000',
                                         }
                                     }}
-                                    name={titulo} 
+                                    name={titulo}
+                                    required
                                     label='Titulo'
                                     variant="filled"
                                     value={titulo}
@@ -123,6 +125,7 @@ export const FormVideo = () => {
                                         }
                                     }}
                                     name={link} 
+                                    required
                                     label='Link del video'
                                     variant="filled"
                                     value={link}
@@ -139,6 +142,7 @@ export const FormVideo = () => {
                                         color: '#000',
                                         backgroundColor: '#9E9E9E',
                                         border:'none',
+                                        readOnly:true,
                                         },
                                     }}
                                     InputLabelProps={{
@@ -147,6 +151,7 @@ export const FormVideo = () => {
                                         }
                                     }}
                                     name={linkImg} 
+                                    required
                                     label='Link de imagen del video'
                                     variant="filled"
                                     value={linkImg}
@@ -170,6 +175,7 @@ export const FormVideo = () => {
                                         }
                                     }}
                                     name={categoria} 
+                                    required
                                     placeholder='Escoja una categoria'
                                     label='Categoria del video'
                                     variant="filled"
@@ -206,6 +212,7 @@ export const FormVideo = () => {
                                         }
                                     }}
                                     name="filled-multiline-flexible" 
+                                    required
                                     label='Descripcion'
                                     variant="filled"
                                     multiline
@@ -233,8 +240,10 @@ export const FormVideo = () => {
                                         }
                                     }}
                                     name={codigo} 
+                                    required
                                     label='Codigo de seguridad'
                                     variant="filled"
+                                    type="password"
                                     value={codigo}
                                     onChange={(e)=>{
                                         setCodigo(e.target.value);

@@ -10,6 +10,7 @@ const Container = styled.section`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin: 2rem 0;
     padding: 1rem 0;
 `
 const LogoAluraFlix = styled.div`
@@ -30,6 +31,7 @@ const DesarrolladoPor = styled.h1`
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        text-align: center;
         `
 
 export const Footer = () => {

@@ -7,6 +7,14 @@
   pointer-events: none;
 }
 
+.custom-container{
+  background-color: #000;
+  box-shadow: 0 0 0 100px #000;
+  overflow-x: visible;
+}
+.window-container{
+  overflow-x: hidden;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

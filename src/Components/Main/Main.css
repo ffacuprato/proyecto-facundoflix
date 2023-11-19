@@ -1,7 +1,7 @@
 .slider-container{
     margin: 0 auto;
     width: 100%;
-    overflow-x: visible;
+    overflow-x: hidden;
     border: none ;
     outline: none;
     background-color:#000000 ;

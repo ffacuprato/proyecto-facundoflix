@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/proyecto-facundoflix/static/css/main.7adf5ac1.css",
-    "main.js": "/proyecto-facundoflix/static/js/main.e8a5def6.js",
+    "main.css": "/proyecto-facundoflix/static/css/main.c45d001e.css",
+    "main.js": "/proyecto-facundoflix/static/js/main.1e31c110.js",
     "static/js/787.2da27bd0.chunk.js": "/proyecto-facundoflix/static/js/787.2da27bd0.chunk.js",
     "static/media/backgroundIT.jpg": "/proyecto-facundoflix/static/media/backgroundIT.4af35405addca86db7cf.jpg",
     "static/media/slider1.png": "/proyecto-facundoflix/static/media/slider1.d3c1c3908da7b8729121.png",
@@ -21,12 +21,12 @@
     "static/media/sliderIyG4.jpeg": "/proyecto-facundoflix/static/media/sliderIyG4.f52612c51215ad2c5150.jpeg",
     "static/media/logo.png": "/proyecto-facundoflix/static/media/logo.6a97f1ba63c84df7f2e2.png",
     "index.html": "/proyecto-facundoflix/index.html",
-    "main.7adf5ac1.css.map": "/proyecto-facundoflix/static/css/main.7adf5ac1.css.map",
-    "main.e8a5def6.js.map": "/proyecto-facundoflix/static/js/main.e8a5def6.js.map",
+    "main.c45d001e.css.map": "/proyecto-facundoflix/static/css/main.c45d001e.css.map",
+    "main.1e31c110.js.map": "/proyecto-facundoflix/static/js/main.1e31c110.js.map",
     "787.2da27bd0.chunk.js.map": "/proyecto-facundoflix/static/js/787.2da27bd0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7adf5ac1.css",
-    "static/js/main.e8a5def6.js"
+    "static/css/main.c45d001e.css",
+    "static/js/main.1e31c110.js"
   ]
 }

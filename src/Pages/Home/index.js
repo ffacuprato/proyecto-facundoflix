@@ -13,6 +13,7 @@ export const Home = () => {
     background-color: #000;
     `
     return <>
+            
             <Body>
                 <Header />
                 <Main />

@@ -8,6 +8,7 @@ import GlobalStyle from "./GlobalStyle";
 import { Home } from "./Pages/Home";
 import { NuevoVideo } from "./Pages/NuevoVideo";
 import { NuevaCategoria } from "./Pages/NuevaCategoria";
+import { Container } from "react-bootstrap";
 
 function App() {
   const [tema, setTema] = useState(true);
@@ -21,7 +22,7 @@ function App() {
         <GlobalStyle />
         <DatosProvider>
         <div className="window-container">
-          <div className="container custom-container">
+          <Container className="custom-container">
             <BrowserRouter basename="/">
               <Routes>
                 <Route path="proyecto-facundoflix" element={<Home />} />
@@ -29,7 +30,7 @@ function App() {
                 <Route path="nueva-categoria" element={<NuevaCategoria />} />
               </Routes>
             </BrowserRouter>
-          </div>
+          </Container>
         </div>
         </DatosProvider>
     </>

@@ -15,6 +15,9 @@
 .window-container{
   overflow-x: hidden;
   width: 100%;
+  background-color: #000;
+  box-shadow: 0 0 0 100px #000;
+
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
